@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Task app</title>
+</head>
+<body>
+    <main>
+        <label>Task:</label>
+        <input type="text" id="name-input" name="name">
+        <button id="add-name-btn">Add Task</button>
+
+        <br><br><br>
+        <div>
+           <input placeholder="search Task" id="search-input">
+           <button id="search-btn">Search</button>
+        </div>
+
+        <table id="table" class="table table-sm">
+            <thead>
+                <th scope="col">ID</th>
+                <th scope="col">Task</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">Delete</th>
+                <th scope="col">Edit</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <section hidden id="update-row">
+            <label>Name:</label>
+            <input type="text" id="update-name-input">
+            <button id="update-row-btn">Update</button>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
