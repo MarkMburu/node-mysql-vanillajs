@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const loadData = () => {
+    //ajax call to connect to the server
     let xhr = new XMLHttpRequest();
     xhr.open('GET','http://localhost:5000/getAll',true)
 

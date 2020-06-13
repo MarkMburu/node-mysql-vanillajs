@@ -6,10 +6,16 @@ dotenv.config();
 
 const dbService = require('./dbservice');
 
+const authenticateController=require('./controllers/authenticate-controller');
+const registerController=require('./controllers/register-controller');
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended : false }));
 
+/* route to handle login and registration */
+app.post('/api/register',registerController.register);
+app.post('/api/authenticate',authenticateController.authenticate);
 
 // create
 app.post('/insert', (request, response) => {
